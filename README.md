@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-Check out the `specs` dorectory for usage examples, but here's a brief example:
+Check out the `specs` directory for usage examples, but here's a brief example:
 
 ```ruby
 csv_string = "a,b,c,d
