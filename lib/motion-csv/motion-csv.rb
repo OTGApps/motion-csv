@@ -1,7 +1,5 @@
 module MotionCSV
 
-  VERSION = "0.0.1"
-
   class Table < Array
 
     class << self

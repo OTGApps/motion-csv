@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   spec.name          = "motion-csv"
   spec.version       = MotionCSV::VERSION
   spec.authors       = ["Mark Rickert"]
-  spec.email         = ["mark@mohawkapps.com"]
+  spec.email         = ["mjar81@gmail.com"]
   spec.description   = %q{This is a RubyMotion friendly port of fasterer-csv by Mason: http://rubygems.org/gems/fasterer-csv}
   spec.summary       = %q{This is a RubyMotion friendly port of fasterer-csv by Mason: http://rubygems.org/gems/fasterer-csv}
   spec.license       = "MIT"
