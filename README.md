@@ -1,5 +1,7 @@
 # motion-csv
 
+![Travis Status](https://travis-ci.org/markrickert/motion-csv.png) [![Code Climate](https://codeclimate.com/github/markrickert/motion-csv.png)](https://codeclimate.com/github/markrickert/motion-csv) 
+
 This is a RubyMotion friendly port of fasterer-csv by Mason: http://rubygems.org/gems/fasterer-csv
 
 ## Installation
@@ -31,6 +33,10 @@ puts csv.headers # [:a, :b, :c, :d]
 puts csv.first[:b] # 2
 puts csv.last[:d] # "whatever"
 ```
+
+## Tests
+
+To run the testing suite, run `rake spec`.
 
 ## Contributing
 
