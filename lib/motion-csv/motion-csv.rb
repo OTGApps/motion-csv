@@ -425,3 +425,37 @@ module MotionCSV
 
   end
 end
+
+class Array
+
+  def to_csv
+    MotionCSV.generate do |csv|
+      if self.depth == 2
+        self.each do |a|
+          csv << a
+        end
+      else
+        csv << self
+      end
+    end
+  end
+
+  def depth
+    # Thanks, StackOverflow! http://stackoverflow.com/a/10863610/814123
+    b, depth = self.dup, 1
+    until b==self.flatten
+      depth+=1
+      b=b.flatten(1)
+    end
+    depth
+  end
+
+end
+
+class String
+
+  def parse_csv
+    MotionCSV.parse(self)
+  end
+
+end

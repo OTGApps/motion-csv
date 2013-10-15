@@ -34,8 +34,29 @@ a,b,c,d,e,f,g,h,i,j,k,l,m,
     table.headers.should == [:a, :b, :c,:d,:e,:f,:g,:h,:i,:j,:k,:l,:m,:_]
   end
 
-end
+  it "should generate a CSV in a block" do
+    csv_string = MotionCSV.generate do |csv|
+      csv << ["row", "of", "CSV", "data"]
+      csv << ["another", "row"]
+    end
+    csv_string.should == "row,of,CSV,data\nanother,row\n"
+  end
 
+  it "should turn an array into CSV" do
+    csv_string = ["testing", "arrays"].to_csv
+    csv_string.should == "testing,arrays\n"
+
+    multi_string = [['array1', 'stuff'],['array2', 'more stuff']].to_csv
+    multi_string.should == "array1,stuff\narray2,more stuff\n"
+  end
+
+  it "should parse a CSV string" do
+    csv_array  = "header1,header2\nCSV,String".parse_csv
+    csv_array.headers.should == [:header1, :header2]
+    csv_array.should == [["CSV", "String"]]
+  end
+
+end
 
 describe "Converters" do
   describe "NumericConverters" do

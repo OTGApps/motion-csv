@@ -1,6 +1,6 @@
 # motion-csv
 
-![Travis Status](https://travis-ci.org/markrickert/motion-csv.png) [![Code Climate](https://codeclimate.com/github/markrickert/motion-csv.png)](https://codeclimate.com/github/markrickert/motion-csv) 
+[![Build Status](https://travis-ci.org/markrickert/motion-csv.png)](https://travis-ci.org/[markrickert/motion-csv) [![Code Climate](https://codeclimate.com/github/markrickert/motion-csv.png)](https://codeclimate.com/github/markrickert/motion-csv) 
 
 This is a RubyMotion friendly port of fasterer-csv by Mason: http://rubygems.org/gems/fasterer-csv
 
@@ -22,6 +22,8 @@ Or install it yourself as:
 
 Check out the `specs` directory for usage examples, but here's a brief example:
 
+### Standard Usage
+
 ```ruby
 csv_string = "a,b,c,d
 1,2,3,4
@@ -32,6 +34,40 @@ csv = MotionCSV.parse(csv_string)
 puts csv.headers # [:a, :b, :c, :d]
 puts csv.first[:b] # 2
 puts csv.last[:d] # "whatever"
+```
+
+### Generating a CSV String
+
+```ruby
+MotionCSV.generate do |csv|
+  csv << ["row", "of", "CSV", "data"]
+  csv << ["another", "row"]
+end
+# "row,of,CSV,data\nanother,row\n"
+```
+
+### Convert an Array to CSV
+This uses a convenience method on the `Array` class. You can pass it a single or two-dimensional array.
+
+```ruby
+["testing", "arrays"].to_csv
+# "testing,arrays\n"
+```
+
+```ruby
+[
+  ['array1', 'stuff'],
+  ['array2', 'more stuff']
+].to_csv
+# "array1,stuff\narray2,more stuff\n"
+```
+
+### Parse a String
+This uses a convenience method on the `String` class.
+
+```ruby
+"header1,header2\nCSV,String".parse_csv
+# [["CSV", "String"]]
 ```
 
 ## Tests
