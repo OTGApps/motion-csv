@@ -20,15 +20,12 @@ Or install it yourself as:
 
 ## Usage
 
-Check out the `specs` directory for usage examples, but here's a brief example:
+Check out the `specs` directory for usage examples, but here's a few brief examples:
 
 ### Standard Usage
 
 ```ruby
-csv_string = "a,b,c,d
-1,2,3,4
-5,6,7,whatever"
-
+csv_string = "a,b,c,d\n1,2,3,4\n5,6,7,whatever\n"
 csv = MotionCSV.parse(csv_string)
 
 puts csv.headers # [:a, :b, :c, :d]
