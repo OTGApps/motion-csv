@@ -1,6 +1,6 @@
 # motion-csv
 
-[![Build Status](https://travis-ci.org/markrickert/motion-csv.png)](https://travis-ci.org/[markrickert/motion-csv) [![Code Climate](https://codeclimate.com/github/markrickert/motion-csv.png)](https://codeclimate.com/github/markrickert/motion-csv) 
+[![Build Status](https://travis-ci.org/OTGApps/motion-csv.svg?branch=master)](https://travis-ci.org/OTGApps/motion-csv) [![Code Climate](https://codeclimate.com/github/OTGApps/motion-csv/badges/gpa.svg)](https://codeclimate.com/github/OTGApps/motion-csv)
 
 This is a RubyMotion friendly port of fasterer-csv by Mason: http://rubygems.org/gems/fasterer-csv
 
@@ -78,6 +78,3 @@ To run the testing suite, run `rake spec`.
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
-
----
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/markrickert/motion-csv/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
